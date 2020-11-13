@@ -1,0 +1,241 @@
+/* Resets CSS */
+
+:root {
+  font-size: 10px;
+  height: auto;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+.container {
+ padding: 1.7rem 1.7rem 0;
+ max-width: 932px;
+ width: 100%;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* Header */
+
+.header {
+  margin-bottom: 3.8rem;
+}
+
+.header__title {
+  font-family: PT Serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 3.8rem;
+}
+
+/* Section */
+
+.section {
+  max-width: 43.9rem;
+  width: 100%;
+}
+
+.section__title {
+  font-size: 1.8rem;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+.section__description {
+  line-height: 2.1rem;
+  font-size: 1.4rem;
+  font-family: 'Poppins';
+}
+
+/* Teams */
+
+.teams-galery {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(13, 30px);
+
+  row-gap: 6.4rem;
+  column-gap: 3rem;
+
+  margin-bottom: 64px;
+}
+
+.person--photo1 {
+  grid-row: 1 / 5;
+}
+
+.person--photo2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 6;
+  
+}
+
+.person--photo3 {
+  grid-row: 5 / 9;
+}
+
+.person--photo4 {
+  grid-column: 2 / 3;
+  grid-row: 6 / 10;
+}
+
+.person--photo5 {
+  grid-row: 9 / 13; 
+}
+
+.person--photo6 {
+  grid-column: 2 / 3;
+  grid-row: 10 / 14;
+}
+
+
+.person {
+  position: relative;
+  margin-bottom: 4rem;
+  height: 100%;
+}
+
+.person__image {
+  padding-right: 1.6rem;
+}
+
+.person__name {
+  font-family: 'Poppins';
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  margin-top: 1rem;
+}
+
+.person__role {
+  font-family: PT Serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  transform: rotate(90deg);
+  position: absolute;
+  top: 4.8rem;
+  right: -4.8rem;
+
+  width: 11rem;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1rem;
+  margin-bottom: 3.2rem;
+
+  text-align: center;
+}
+
+.footer__description {
+  font-family: 'Montserrat';
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  color: #A9A9A9;
+
+  margin-top: 3.2rem;
+}
+
+@media (min-width: 900px) {
+  .container {
+    margin: 2.4rem auto;
+  }
+
+  .teams-galery {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-rows: repeat(11, 30px);
+    column-gap: 9.2rem;
+    margin-bottom: 0;
+  }
+  
+  .person--photo1 {
+    grid-row:  1 / 5; 
+  }
+
+  .person-photo2 {
+    grid-row: 2 / 6;
+  }
+
+  .person--photo4 {
+    grid-column: 1 / 2;
+    grid-row: 6;
+  }
+
+  .person--photo5 {
+    grid-column: 2 / 3;
+    grid-row: 7 / 11;
+  }
+
+  .person--photo3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 6;
+  }
+
+  .person--photo6 {
+    grid-row: 6;
+    grid-column: 3 / 4;
+  }
+
+  .footer {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 899px) {
+  .teams-galery {
+    row-gap: 20rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .header__title {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .section__title {
+    margin-bottom: 1.6rem;
+  }
+
+  .section__description {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+}
